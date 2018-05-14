@@ -13,3 +13,4 @@
 	4.编写一个txt文件，注意使用noetpad++编写。放在repository目录下。提交到git中
 		4.1.git add xxx.txt
 		4.2.git commit -m "添加-m参数是添加描述的意思"    commit可以一次提交多个文件，add一次只能添加一个文件
+	5.修改文件后，执行  git status  查看状态。git diff 查看修改的地方
