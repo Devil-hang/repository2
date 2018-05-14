@@ -1,0 +1,15 @@
+我的第一个git联练习
+	1.安装git   在git-bash中配置全局变量
+		1.1.git config --global user.name "Devil"
+		1.2.git config --global user.email "15827894540@163.com"
+	2.创建一个git仓库--在F盘
+		2.1.mkdir f:/Git/repository
+		2.2.查看是否创建成功
+			2.2.1.cd f:/
+			2.2.2.cd Git/repository--能成功进入
+	3.初始化git仓库
+		3.1.在repository目录下-- git init
+			会出现.git文件   使用ls -ah查看
+	4.编写一个txt文件，注意使用noetpad++编写。放在repository目录下。提交到git中
+		4.1.git add xxx.txt
+		4.2.git commit -m "添加-m参数是添加描述的意思"    commit可以一次提交多个文件，add一次只能添加一个文件
