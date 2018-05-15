@@ -1,8 +1,0 @@
-[2018-04-13 15:13:19] [INFO] 准备初始化driver...
-[2018-04-13 15:14:08] [INFO] driver初始化成功...driver is :AndroidDriver:  on ANDROID (48dd5828-88fe-4c84-a9a7-7e19ea5f1f82)
-[2018-04-13 15:14:08] [INFO] 准备读取excel文件
-[2018-04-13 15:14:08] [INFO] login_successful 测试用例开始执行！
-[2018-04-13 15:15:00] [INFO] 点击元素： xpath: //*[@content-desc='获取验证码']
-[2018-04-13 15:15:04] [INFO] 登录成功
-[2018-04-13 15:15:04] [INFO] login_successful测试用例执行成功!
-[2018-04-13 15:15:08] [INFO] 执行成功的用例 = login_successful
