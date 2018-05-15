@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [appium]" parallel="tests">
+  <parameter name="appPackage" value="com.tencent.mm"/>
+  <parameter name="noReset" value="true"/>
+  <parameter name="deviceName" value="M92QACQ5D77M9"/>
+  <parameter name="appActivity" value=".ui.LauncherUI"/>
+  <parameter name="xiaochengxu" value="true"/>
+  <parameter name="newCommandTimeout" value="60"/>
+  <parameter name="serverURL" value="http://127.0.0.1:4723/wd/hub"/>
+  <parameter name="platformVersion" value="6.0.1"/>
+  <parameter name="automationName" value="uiautomator2"/>
+  <parameter name="unicodeKeyboard" value="true"/>
+  <parameter name="sessionOverride" value="true"/>
+  <parameter name="platformName" value="Android"/>
+  <parameter name="resetKeyboard" value="true"/>
+  <listeners>
+    <listener class-name="com.devil.configure.TestResultListener"/>
+    <listener class-name="com.devil.configure.ExcelReporter"/>
+  </listeners>
+  <test name="测试登录">
+    <classes>
+      <class name="com.devil.testcase.login.LoginPage_001_LoginSuccessful_Test"/>
+    </classes>
+  </test> <!-- 测试登录 -->
+  <test name="测试登录(failed)" parallel="tests">
+    <classes>
+      <class name="com.devil.testcase.login.LoginPage_001_LoginSuccessful_Test">
+        <methods>
+          <include name="login_successful"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.devil.testcase.login.LoginPage_001_LoginSuccessful_Test -->
+    </classes>
+  </test> <!-- 测试登录(failed) -->
+</suite> <!-- Failed suite [appium] -->
