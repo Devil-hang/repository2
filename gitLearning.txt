@@ -28,4 +28,8 @@
 	9.删除
 		9.1.真删除-- rm text.txt（删除本地） 删除git  git rm text.txt
 		9.2.删除还原--  git checkout -- text.txt --用仓库中的文件替换本地
-		
+	10.上传本地文件到远程仓库
+		10.1.首先 git add   git commit -m    
+		10.2.关联远程仓库 git remote add origin 远程地址
+		10.3.获取远程仓库与本地合并   git pull --rebase origin master
+		10.4.git push -u origin master  第一次需要添加-u参数 后面直接  git push origin master
