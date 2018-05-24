@@ -1,4 +1,4 @@
-我的第一it联练习
+﻿我的第一it联练习
 	1.安装git   在git-bash中配置全局变量
 		1.1.git config --global user.name "Devil"
 		1.2.git config --global user.email "15827894540@163.com"
@@ -33,3 +33,9 @@
 		10.2.关联远程仓库 git remote add origin 远程地址
 		10.3.获取远程仓库与本地合并   git pull --rebase origin master
 		10.4.git push -u origin master  第一次需要添加-u参数 后面直接  git push origin master
+
+执行 git push -u origin master
+报错：failed to push some refs to 'git@github.com:Devil-hang/repository2.git'
+可以执行 git pull --rebase master 如果报错：error: cannot pull with rebase: You have unstaged changes.error: please commit or stash them.
+执行：git stash    git pull --rebase    git stash pop(下载最近的提交)
+
