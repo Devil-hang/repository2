@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <a class="btn btn-success" href="javascript:history.go(-1)">返回</a>
+    </div>
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>所属项目</th>
+                    <th>所属用例</th>
+                    <th>步骤</th>
+                    <th>定位方式</th>
+                    <th>控件元素</th>
+                    <th>操作方法</th>
+                    <th>测试数据</th>
+                    <th>预期结果</th>
+                    <th>实际结果</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for step in steps %}
+                    <tr>
+                        <td>{{ step.id }}</td>
+                        <td>{{ step.case.product }}</td>
+                        <td>case{{ step.case.id }}:{{ step.case.caseName }}</td>
+                        <td>{{ step.testStep }}:{{ step.action }}</td>
+                        <td>{{ step.findMethod }}</td>
+                        <td>{{ step.element }}</td>
+                        <td>{{ step.execMethod }}</td>
+                        <td>{{ step.testData }}</td>
+                        <td>{{ step.expect }}</td>
+                        <td>{% if step.actual == 1 %}
+                        <a style="color: deepskyblue" >{{ step.actual }}</a>
+                            {% else %}
+                        <a style="color: red">{{ step.actual }}</a>
+                            {% endif %}
+                        </td>
+                        <td>{{ step.createTime }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

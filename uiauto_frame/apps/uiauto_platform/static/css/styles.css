@@ -1,0 +1,64 @@
+#accordion{
+    text-align: center;
+    margin-top: 70px;
+}
+#content{
+    margin-top: 70px;
+}
+
+[class='btn btn-success']{
+    float: right;
+    margin-bottom: 20px;
+}
+
+[class='table table-hover']{
+    margin: 10px;
+}
+
+.card-link{
+    color: black;
+}
+.container{
+    background: rgba(255,255,255,0.2);width:400px;margin:120px auto;
+}
+/*阴影*/
+.form-group{
+    display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;
+}
+input[type="text"],input[type="password"]{
+    padding-left:26px;
+}
+nav a{
+    color: deepskyblue;
+}
+
+
+/*
+add_case.html里面的css
+*/
+h1 {
+    margin: 0 0 20px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #666;
+}
+
+.form-row {
+    overflow: hidden;
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+}
+
+#case-form label{
+    display: block;
+    padding: 4px 10px 0 0;
+    float: left;
+    width: 160px;
+    word-wrap: break-word;
+    line-height: 1;
+}
+
+.form-row input{
+    margin-bottom: 0px;
+}

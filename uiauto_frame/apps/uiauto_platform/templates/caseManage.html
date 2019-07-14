@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <a class="btn btn-success" href="{% url 'add_case' %}">新增</a>
+    </div>
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">项目</th>
+                    <th scope="col">用例名称</th>
+                    <th scope="col">测试结果</th>
+                    <th scope="col">负责人</th>
+                    <th scope="col">时间</th>
+                    <th scope="col">用例步骤</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for case in case_list %}
+                    <tr>
+                        <th>{{ case.id }}</th>
+                        <th>{{ case.product }}</th>
+                        <th>{{ case.caseName }}</th>
+                        <th>{{ case.testResult }}</th>
+                        <th>{{ case.tester }}</th>
+                        <th>{{ case.createTime }}</th>
+                        <th><a href="/caseDetail/?id={{ case.id  }}">查看</a></th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

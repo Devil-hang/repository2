@@ -1,0 +1,19 @@
+1.auth模块。通过导入：from django.contrib import auth
+    1-1.authenticate().检查用户名与密码是否匹配。需要两个参数(username，password)。自动去数据库校验
+        user = auth.authenticate(username=username, password=pwd) -->登录成功返回用户名。 失败返回None
+    1-2.login()
+        登录成功后能使用，主要给已认证的用户添加session id等信息。
+        auth.login(request, user)  后面可以直接通过 reques.user.username 访问到用户
+    1-3.logout()
+        退出。auth.logout(request)  等价于 reques.session.flush() 清空session
+    1-4.1.@login_required   保证访问的页面必须是已登录的
+        当没有登录时（直接通过url访问页面时，会根据设置的url重定向到相应地址。一般是到登录页面）
+    user对象:
+        1-1.is_authenticated属性。判断用户是否通过验证
+        request.user.is_authenticated   返回true 则通过验证，反之未通过
+        1-2.create_user
+            from django.contrib.auth.models import User
+            user = User.objects.create_user(username='', password='', email='')
+
+2.model 中重写 __str__() 方法时。return 后面必须是字符串
+
