@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div id="content">
+    <h1>添加测试用例</h1>
+        <div id="content-main">
+            <form method="post" action id="case-form">
+                    <div class="form-row product">
+                        <label class="required" for="id_product">项目：</label>
+                            <select name="product" required id="id_product">
+                                <option value selected>---请选择---</option>
+                                {% for product in productes %}
+                                    <option value={{ forloop.counter }}>{{ product }}</option>
+                                {% endfor %}
+                            </select>
+                            <a class="related-widget-wrapper-link change-related" href="#" title="添加项目">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-tianjiaxiao"></use>
+                                </svg>
+                            </a>
+                    </div>
+
+                    <div class="form-row caseName">
+                        <label for="id_caseName" class="required">用例名称：</label>
+                        <input type="text" name="caseName" class="vTextField" id="id_caseName" maxlength="20">
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .icon {
+          width: 1em;
+          height: 1em;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+          font-size: 20px;
+          color: #55a532;
+        }
+</style>
+
+{% endblock %}
